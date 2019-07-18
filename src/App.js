@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import PhotoCard from './components/PhotoCard.js'
 import "./App.css";
-import ImgGrid from './components/ImgGrid'
 
 function App() {
+console.log('first')
+
+
+
   return (
     <div className="App">      
-      <ImgGrid />
+      <PhotoCard />
     </div>
   );
 }
+
+
 
 export default App;
