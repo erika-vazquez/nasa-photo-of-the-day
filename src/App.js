@@ -4,14 +4,15 @@ import PhotoCard from './components/PhotoCard.js'
 import "./App.css";
 
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({});
 
 useEffect(()=> {
+  console.log("first")
   axios
-.get('https://api.nasa.gov/planetary/apod?date=2017-11-02')
-.then(result =>{
+.get('https://api.nasa.gov/planetary/apod?api_key=p9BsgwQG9lcjsIOL02DjTgmBPwN4RZ0yrWEGF8RK&date=1999-09-04')
+.then(response =>{
   console.log(response.data)
-  setData(result.data);
+  setData(response.data);
 })
 },[]);
 
